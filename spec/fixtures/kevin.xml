@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+  xml:base="http://weblog.hypotheticalabs.com/wp-atom.php"
+   >
+	<title type="text">Hypothetical Labs</title>
+	<subtitle type="text">Improving the world, hypothetically</subtitle>
+
+	<updated>2009-01-27T01:29:01Z</updated>
+	<generator uri="http://wordpress.org/" version="2.6.3">WordPress</generator>
+
+	<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com" />
+	<id>http://weblog.hypotheticalabs.com/?feed=atom</id>
+	<link rel="self" type="application/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom" />
+
+			<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[RabbitMQ AMIs]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=387" />
+		<id>http://weblog.hypotheticalabs.com/?p=387</id>
+		<updated>2009-01-27T01:29:01Z</updated>
+		<published>2009-01-27T01:27:56Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Erlang" /><category scheme="http://weblog.hypotheticalabs.com" term="Tech" />		<summary type="html"><![CDATA[I&#8217;ve built two new AMIs, this time forRabbitMQ. The image includes the latest releases of Erlang (R12B-5 as of this writing), nodefinder, and RabbitMQ server and Erlang client. The Erlang client is fresh out of the Mercurial repo since the published snapshot seemed to have issues connecting to a 1.5.1 server.
+Below is the complete list [...]]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=387"><![CDATA[<p>I&#8217;ve built two new AMIs, this time for<a href="http://www.rabbitmq.com">RabbitMQ</a>. The image includes the latest releases of Erlang (R12B-5 as of this writing), <a href="http://code.google.com/p/nodefinder">nodefinder</a>, and RabbitMQ server and Erlang client. The Erlang client is fresh out of the Mercurial repo since the published snapshot seemed to have issues connecting to a 1.5.1 server.</p>
+<p>Below is the complete list of all my Erlang AMIs. Next up, ejabberd!</p>
+<table cols="3" border="0" width="80%">
+<thead>
+<tr>
+<td>ID</td>
+<td>Name</td>
+<td>Featuring</td>
+</tr>
+</thead>
+<tr>
+<td>ami-1297707b</td>
+<td>hypotheticalabs-erlang-r12b5-rabbitmq-32bit</td>
+<td>RabbitMQ</td>
+</tr>
+<tr>
+<td>ami-e697708f</td>
+<td>hypotheticalabs-erlang-r12b5-rabbitmq-64bit</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>ami-e48c6b8d</td>
+<td width>hypotheticalabs-erlang-r12b5-web-32bit</td>
+<td>mochiweb, webmachine, nodefinder</td>
+</tr>
+<tr>
+<td>ami-f88c6b91</td>
+<td>hypotheticalabs-erlang-r12b5-web-64bit</td>
+<td>Same</td>
+</tr>
+</table>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=387#comments" thr:count="0"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=387" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[More AMIs?]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=385" />
+		<id>http://weblog.hypotheticalabs.com/?p=385</id>
+		<updated>2009-01-23T12:35:06Z</updated>
+		<published>2009-01-23T12:35:05Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Erlang" />		<summary type="html"><![CDATA[I&#8217;ve been thinking about building more Erlang AMIs now that I&#8217;ve got my image build process 99% automated. The images I&#8217;ve done so far include some general libraries which can be used to build a wide array of things. I&#8217;m thinking it would be useful to provide a few specialized images like:
+
+CouchDB: using either S3 [...]]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=385"><![CDATA[<p>I&#8217;ve been thinking about building more Erlang AMIs now that I&#8217;ve got my image build process 99% automated. The images I&#8217;ve done so far include some general libraries which can be used to build a wide array of things. I&#8217;m thinking it would be useful to provide a few specialized images like:</p>
+<ul>
+<li><a href="http://couchdb.apache.org/">CouchDB</a>: using either S3 (via s3fs) or EBS for storage</li>
+<li><a href="http://www.rabbitmq.com/">RabbitMQ</a>: AMQP clients for Java, Python, Ruby, and Erlang preinstalled</li>
+<li><a href="http://discoproject.org/">Disco</a>: preconfigured server and client</li>
+<li><a href="http://code.google.com/p/scalaris/">Scalaris</a></li>
+<li>Dedicated mnesia node using s3fs or EBS for storage</li>
+</ul>
+<p>Do any of these sound useful or interesting to you? Have I missed your favorite piece of Erlang software? Leave a comment and let me know. I&#8217;ll compile and post the results in a few days.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=385#comments" thr:count="3"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=385" thr:count="3"/>
+		<thr:total>3</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[More Erlang AMI Updates]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=383" />
+		<id>http://weblog.hypotheticalabs.com/?p=383</id>
+		<updated>2009-01-23T05:08:07Z</updated>
+		<published>2009-01-23T05:08:06Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Erlang" />		<summary type="html"><![CDATA[I&#8217;ve updated both images based on comments about my last AMI build.
+This update adds the Java JRE 6.0, a full install of the ec2-amitools package, and the unzip command. The ec2nodefinder library has a bug in it which should get patched shortly. If you need dynamic node discovery right now it looks like s3nodefinder is [...]]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=383"><![CDATA[<p>I&#8217;ve updated both images based on comments about my last AMI <a href="/?p=364">build</a>.</p>
+<p>This update adds the Java JRE 6.0, a full install of the ec2-amitools package, and the unzip command. The ec2nodefinder library has a bug in it which should get patched shortly. If you need dynamic node discovery right now it looks like s3nodefinder is the way to go until ec2nodefinder is fixed.</p>
+<p>The old AMIs have been deregistered and removed from S3. Here&#8217;s the names and AMI IDs for the new images:</p>
+<table cols="3" border="0" width="80%">
+<thead>
+<tr>
+<td>ID</td>
+<td>Manifest</td>
+<td>Arch</td>
+</tr>
+</thead>
+<tr>
+<td>ami-e48c6b8d</td>
+<td width>hypotheticalabs-erlang-r12b5-web-32bit</td>
+<td>&nbsp;&nbsp;i386</td>
+</tr>
+<tr>
+<td>ami-f88c6b91</td>
+<td>hypotheticalabs-erlang-r12b5-web-64bit</td>
+<td>&nbsp;&nbsp;x86_64</td>
+</tr>
+</table>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=383#comments" thr:count="2"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=383" thr:count="2"/>
+		<thr:total>2</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[Snow Day]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=381" />
+		<id>http://weblog.hypotheticalabs.com/?p=381</id>
+		<updated>2009-01-22T15:57:53Z</updated>
+		<published>2009-01-22T15:57:52Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Life" />		<summary type="html"><![CDATA[Yesterday my daughter and I decided to get out and explore our snow covered neighborhood. A couple of our pictures turned out surprisingly well so I thought I&#8217;d share them.
+
+This is our neighborhood&#8217;s nature trail. The city of Raleigh was forward thinking enough to build a network of nature trails and greenways which connect a [...]]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=381"><![CDATA[<p>Yesterday my daughter and I decided to get out and explore our snow covered neighborhood. A couple of our pictures turned out surprisingly well so I thought I&#8217;d share them.</p>
+<p><a href="images/footpath.jpg"><img src="images/footpath_thumb.jpg" height="300"/></a></p>
+<p>This is our neighborhood&#8217;s nature trail. The city of Raleigh was forward thinking enough to build a network of nature trails and greenways which connect a large part of the city. This trail starts a few blocks from our house and ends at <a href="http://www.raleighnc.gov/portal/server.pt/gateway/PTARGS_0_2_306_209_0_43/http%3B/pt03/DIG_Web_Content/category/Leisure/Parks_and_Facilities/Lakes/Cat-1C-20041118-104321-Shelley_Lake.html">Shelley Lake</a>.</p>
+<p>Near the end of the trail is a creek which feeds into the lake:</p>
+<p><a href="images/creek.jpg"><img src="images/creek_thumb.jpg" height="300" /></a></p>
+<p>We made our way over to the lake where we were treated to a flock of geese landing in the cold water:</p>
+<p><a href="images/geese.jpg"><img src="images/geese_thumb.jpg" height="300" /></a></p>
+<p>You&#8217;d never guess from these pictures we live less than 10 minutes from downtown Raleigh.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=381#comments" thr:count="0"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=381" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[Winter Surprise]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=379" />
+		<id>http://weblog.hypotheticalabs.com/?p=379</id>
+		<updated>2009-01-20T12:33:08Z</updated>
+		<published>2009-01-20T12:33:06Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Life" />		<summary type="html"><![CDATA[Sunday night was a bad night&#8217;s sleep for me so I went to bed early last night to catch up. I woke up to this:
+
+Raleigh is not well-equipped to dealing with winter-&#8221;ish&#8221; weather. The suffix &#8220;-ish&#8221; is justified because 4 years ago a half inch of snow (!!!) paralyzed the city for a full day. [...]]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=379"><![CDATA[<p>Sunday night was a bad night&#8217;s sleep for me so I went to bed early last night to catch up. I woke up to this:</p>
+<p><a href="/images/winter_2009.jpg"><img src="/images/winter_2009_thumb.jpg"></a></p>
+<p>Raleigh is not well-equipped to dealing with winter-&#8221;ish&#8221; weather. The suffix &#8220;-ish&#8221; is justified because 4 years ago a half inch of snow (!!!) paralyzed the city for a full day. The current <a href="http://www.wral.com/news/local/story/4351514/">prediction</a> of 4 inches should be the end of civilization as we know it :)</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=379#comments" thr:count="0"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=379" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[More EC2 and Erlang Goodness]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=364" />
+		<id>http://weblog.hypotheticalabs.com/?p=364</id>
+		<updated>2009-01-19T12:34:42Z</updated>
+		<published>2009-01-19T02:01:51Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Erlang" /><category scheme="http://weblog.hypotheticalabs.com" term="Tech" />		<summary type="html"><![CDATA[So I spent part of this weekend building even newer AMI images. Why? Because I hate being bored, I guess. Oh, and the thought of giving the world another reason to try Erlang warms my heart&#8217;s cockles :)
+The images feature:
+
+R12B-5 built from scratch with support for threads, SMP, kernel poll, and HiPE enabled
+The excellent webmachine [...]]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=364"><![CDATA[<p>So I spent part of this weekend building even newer AMI images. Why? Because I hate being bored, I guess. Oh, and the thought of giving the world another reason to try Erlang warms my heart&#8217;s cockles :)</p>
+<p>The images feature:</p>
+<ul>
+<li>R12B-5 built from scratch with support for threads, SMP, kernel poll, and HiPE enabled</li>
+<li>The excellent <a href="http://code.google.com/p/webmachine/">webmachine</a> and <a href="http://code.google.com/p/mochiweb/">mochiweb</a> libraries</li>
+<li>The <a href="	http://erlsom.sourceforge.net/">erlsom</a> XML parsing library because sometimes xmerl is overkill</a></li>
+<li>s3nodefinder and ec2nodefinder from the ever useful <a href="http://code.google.com/p/nodefinder/">nodefinder</a> project</li>
+</ul>
+<p>The AMI IDs and manifest names for the images are:</p>
+<table cols="3" border="0" width="80%">
+<thead>
+<tr>
+<td>ID</td>
+<td>Manifest</td>
+<td>Arch</td>
+</tr>
+</thead>
+<tr>
+<td>ami-11876078</td>
+<td width>hypotheticalabs-erlang-r12b5-web-32bit</td>
+<td>&nbsp;&nbsp;i386</td>
+</tr>
+<tr>
+<td>ami-ea876083</td>
+<td>hypotheticalabs-erlang-r12b5-web-64bit</td>
+<td>&nbsp;&nbsp;x86_64</td>
+</tr>
+</table>
+<p>Many thanks to <a href="http://alestic.com">alestic.com</a>, the <a href="http://dukesoferl.blogspot.com/">Dukes of Erl</a>, and the <a href="http://code.google.com/p/mochiweb">mochiweb</a> and <a href="http://code.google.com/p/webmachine">webmachine</a> projects for providing the building blocks which make these images possible.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=364#comments" thr:count="3"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=364" thr:count="3"/>
+		<thr:total>3</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[Updated Public Erlang AMI]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=360" />
+		<id>http://weblog.hypotheticalabs.com/?p=360</id>
+		<updated>2009-01-16T03:05:25Z</updated>
+		<published>2009-01-16T03:04:21Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Erlang" />		<summary type="html"><![CDATA[I spent a bit of time this evening cleaning house on my S3 bucket and EC2 AMIs. I&#8217;ve de-published and removed my existing Erlang AMI. The Erlang build was quite old and not many people were using it.
+I&#8217;ve put together a new AMI using Fedora 8 and the latest Erlang build (R12B-5 as of this [...]]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=360"><![CDATA[<p>I spent a bit of time this evening cleaning house on my S3 bucket and EC2 AMIs. I&#8217;ve de-published and removed my existing Erlang AMI. The Erlang build was quite old and not many people were using it.</p>
+<p>I&#8217;ve put together a new AMI using Fedora 8 and the latest Erlang build (R12B-5 as of this writing). Erlang was built with <code>--enable-threads, --enable-smp, --enable-hipe</code>, and <code>--enable-kernel-poll</code>. SSL support is included, too.</p>
+<p>It&#8217;s a 32 bit image for now, but if there&#8217;s interest I&#8217;ll build a 64 bit version of it too.</p>
+<p>The AMI id of the image is <code>ami-e8ba5d81</code>. Searches for &#8220;hypotheticalabs&#8221; in Amazon&#8217;s AWS console should find it, too.</p>
+<p>I&#8217;ll augment this image a bit with mochiweb and a few other handy libs. Looks for updates on that front soonish.</p>
+<p><em>Note: Yes, Erlang was built from source. The Fedora &#8212; and Ubuntu for that matter &#8212; build of Erlang is quite old. I have a violent allergy to RPMs and didn&#8217;t feel like spending the hours it&#8217;d take to package things up properly.</em></p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=360#comments" thr:count="1"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=360" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[Oops, I Did It Again]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=358" />
+		<id>http://weblog.hypotheticalabs.com/?p=358</id>
+		<updated>2009-01-13T02:18:41Z</updated>
+		<published>2009-01-13T02:18:40Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Erlang" />		<summary type="html"><![CDATA[The latest correction to my screencasts.
+Apologies for any confusion caused by my mistake. One thing is for sure, I&#8217;ll remember the correct way to use global:trans/2.
+]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=358"><![CDATA[<p>The <a href="http://forums.pragprog.com/forums/73/topics/1788">latest</a> correction to my <a href="http://www.pragprog.com/screencasts/v-kserl/erlang-in-practice">screencasts</a>.</p>
+<p>Apologies for any confusion caused by my mistake. One thing is for sure, I&#8217;ll remember the correct way to use <code>global:trans/2<code>.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=358#comments" thr:count="4"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=358" thr:count="4"/>
+		<thr:total>4</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[CodeMash Slides &#038; Code]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=356" />
+		<id>http://weblog.hypotheticalabs.com/?p=356</id>
+		<updated>2009-01-09T16:38:08Z</updated>
+		<published>2009-01-09T16:38:06Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Erlang" /><category scheme="http://weblog.hypotheticalabs.com" term="Talks" />		<summary type="html"><![CDATA[Anyone interested in my CodeMash 2009 Erlang talk can pick up the slides and demo code files in tar and zip formats here and here.
+I&#8217;ve got lots more to talk about but haven&#8217;t had a lot of time to blog. More updates soon&#8230;
+]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=356"><![CDATA[<p>Anyone interested in my CodeMash 2009 Erlang talk can pick up the slides and demo code files in tar and zip formats <a href="downloads/codemash.tar.gz">here</a> and <a href="downloads/codemash.zip">here</a>.</p>
+<p>I&#8217;ve got lots more to talk about but haven&#8217;t had a lot of time to blog. More updates soon&#8230;</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=356#comments" thr:count="0"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=356" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>kevin</name>
+						<uri>http://weblog.hypotheticalabs.com</uri>
+					</author>
+		<title type="html"><![CDATA[Atom Feed Fixed]]></title>
+		<link rel="alternate" type="text/html" href="http://weblog.hypotheticalabs.com/?p=354" />
+		<id>http://weblog.hypotheticalabs.com/?p=354</id>
+		<updated>2008-12-29T17:07:32Z</updated>
+		<published>2008-12-29T17:07:31Z</published>
+		<category scheme="http://weblog.hypotheticalabs.com" term="Writing" />		<summary type="html"><![CDATA[The Atom feed for my blog should be working again after I apparently borked it during a recent Wordpress upgrade.
+Thanks to Serge for pointing out the broken feed!
+]]></summary>
+		<content type="html" xml:base="http://weblog.hypotheticalabs.com/?p=354"><![CDATA[<p>The Atom <a href="/?feed=atom">feed</a> for my blog should be working again after I apparently borked it during a recent Wordpress upgrade.</p>
+<p>Thanks to Serge for pointing out the broken feed!</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://weblog.hypotheticalabs.com/?p=354#comments" thr:count="0"/>
+		<link rel="replies" type="appication/atom+xml" href="http://weblog.hypotheticalabs.com/?feed=atom&amp;p=354" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+	</feed>
+
+<!-- Dynamic Page Served (once) in 0.134 seconds -->
