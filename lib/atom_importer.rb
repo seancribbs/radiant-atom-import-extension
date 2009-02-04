@@ -27,13 +27,14 @@ class AtomImporter
   end
   
   def import_entry(entry)
+    set_user_for_entry(entry.authors.first)
     page = blog.children.find_or_initialize_by_title(entry.title)
     page.breadcrumb = entry.title
     page.slug = entry.title.to_slug
     page.status = Status[:published]
     page.published_at = entry.published
     page.parts.build(:name => "body", :content => entry.content.value)
-    page.save
+    page.save!
   end
   
   private
@@ -59,4 +60,14 @@ class AtomImporter
       blog.save!
     end
     
+    def set_user_for_entry(author)
+      UserActionObserver.current_user = begin
+        user = User.find_or_initialize_by_name(author.name)
+        if user.new_record?
+          user.password = user.password_confirmation = user.login = author.name.to_slug
+          user.save!
+        end
+        user
+      end
+    end
 end

@@ -98,6 +98,10 @@ describe AtomImporter do
       it "should have the content as the body part" do
         @page.part(:body).content.should == @entry.content.value
       end
+      
+      it "should be created by the original author" do
+        @page.created_by.name.should == "Sean Cribbs"
+      end
     end
   end
 end
